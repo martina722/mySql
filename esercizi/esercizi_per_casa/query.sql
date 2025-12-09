@@ -33,3 +33,7 @@ INSERT INTO PRODOTTI (Nome, Prezzo, Disponibilità) VALUES
 
 INSERT INTO ORDINE (Data_Ordine, ID_Cliente, Totale) VALUES
 ('2024-11-01', 1, 899.99);
+
+SELECT corsisti.nome, corsisti.cognome, corsisti.data_di_nascita AS moduli.nome
+FROM corsisti JOIN iscrizioni ON corsisti.id = iscrizioni.corsista_id
+JOIN moduli ON iscrizioni.modulo_id = moduli.id;
